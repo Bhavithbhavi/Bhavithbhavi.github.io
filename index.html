@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pulluru Bhavith · AI Engineer</title>
+  <meta name="description" content="AI Engineer in Hyderabad building production LLM applications, multi-agent systems and RAG pipelines with LangGraph, FastAPI and Qdrant.">
+  <meta name="author" content="Pulluru Bhavith">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pulluru Bhavith · AI Engineer">
+  <meta property="og:description" content="Multi-agent LLM systems, RAG pipelines and self-hosted generative models, built for production.">
+  <meta property="og:url" content="https://bhavithbhavi.github.io/">
+  <meta name="theme-color" content="#0c0d10" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    // Apply the saved theme before first paint so the page doesn't flash.
+    document.documentElement.classList.add('js');
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Pulluru Bhavith, back to top">
+        <span class="brand-mark" aria-hidden="true">PB</span>
+        <span class="brand-name">Pulluru Bhavith</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch colour theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>AI Engineer · Hyderabad, India</p>
+          <h1>I build multi-agent LLM systems that <span class="hl">run in production</span>.</h1>
+          <p class="lede">
+            I turn messy inputs (textbooks, videos, resumes, live interviews) into reliable AI pipelines
+            with LangGraph, retrieval and self-hosted models, with tracing and human review built in.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#projects">See my work</a>
+            <a class="btn btn-ghost" href="assets/Pulluru_Bhavith_Resume.pdf" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+              Resume
+            </a>
+            <a class="btn btn-ghost" href="mailto:karnambhavith88@gmail.com">Email me</a>
+          </div>
+        </div>
+
+        <figure class="graph-card" aria-label="Animated diagram of an agent pipeline">
+          <div class="graph-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="mono">gradeup / extraction_graph</span>
+          </div>
+          <svg id="agent-graph" class="agent-graph" viewBox="0 0 420 390" role="img" aria-labelledby="graph-title">
+            <title id="graph-title">Textbook PDF flows through OCR, structure discovery, blueprint and judge agents, a gap filler fed by Qdrant RAG, a validator, a human approval gate, and finally a Google Slides agent.</title>
+          </svg>
+          <figcaption>
+            <span class="graph-status mono" aria-hidden="true"><span class="pulse" aria-hidden="true"></span><span id="graph-step">running</span></span>
+            <span class="graph-note">Simplified view of the 14-agent GradeUp pipeline</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="container">
+        <dl class="stats">
+          <div class="stat"><dt>agents in one LangGraph pipeline</dt><dd>14</dd></div>
+          <div class="stat"><dt>FastAPI endpoints in production</dt><dd>40+</dd></div>
+          <div class="stat"><dt>self-hosted GPU model endpoints</dt><dd>10</dd></div>
+          <div class="stat"><dt>Indic languages in my dubbing pipeline</dt><dd>11</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container two-col">
+        <div class="section-head reveal">
+          <p class="section-kicker mono">01 · About</p>
+          <h2>Pipelines first, prompts second.</h2>
+        </div>
+        <div class="reveal">
+          <p class="body-lg">
+            I'm an AI Engineer at Prowess Software Services, where I design and ship LLM applications end to end:
+            OCR and extraction, agent orchestration, hybrid retrieval, real-time conversational engines and the
+            APIs that serve them. I care most about the parts that make AI dependable: async design, clear
+            quality gates, observability and a human in the loop where it matters.
+          </p>
+          <ul class="focus-list">
+            <li>
+              <h3>Agent orchestration</h3>
+              <p>LangGraph StateGraphs, tool calling, MCP and human-approval gates for multi-step work.</p>
+            </li>
+            <li>
+              <h3>Retrieval</h3>
+              <p>Hybrid RAG with Qdrant, Voyage AI embeddings and live SearXNG web search.</p>
+            </li>
+            <li>
+              <h3>Shipping it</h3>
+              <p>FastAPI, Docker, AWS and RunPod, with Langfuse tracing and secrets kept out of images.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker mono">02 · Experience</p>
+          <h2>Where I've worked</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="job reveal">
+            <div class="job-meta">
+              <span class="mono">Sep 2024 – Present</span>
+              <span>Hyderabad, India</span>
+            </div>
+            <div class="job-body">
+              <h3>AI Engineer <span class="at">· Prowess Software Services</span></h3>
+              <ul>
+                <li>Architected and deployed production LLM applications with LangChain, LangGraph and GPT-4o / GPT-4o-mini using multi-agent orchestration.</li>
+                <li>Built and maintain 40+ FastAPI endpoints behind the AI Tutor, Debate, Seminar, Quiz and English Teacher engines of an edtech platform.</li>
+                <li>Designed a hybrid RAG pipeline combining Qdrant vector search (Voyage AI embeddings) with SearXNG web search for real-time, context-rich answers.</li>
+                <li>Implemented per-student Google OAuth (Scalekit) and Google Slides batchUpdate calls so an AI agent can generate and correct each student's slides.</li>
+                <li>Added Langfuse observability for tokens, latency and quality across every pipeline; deployed on AWS S3 and Qdrant Cloud.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job reveal">
+            <div class="job-meta">
+              <span class="mono">Aug 2024 – Jan 2025</span>
+              <span>Chennai, India</span>
+            </div>
+            <div class="job-body">
+              <h3>AI Software Engineer Intern <span class="at">· Tardiverse</span></h3>
+              <ul>
+                <li>Designed and deployed the SalesPal AI chatbot with LangChain, LangGraph and Azure OpenAI, lifting customer engagement by 30%.</li>
+                <li>Built RAG pipelines and custom agents for domain-specific knowledge retrieval with LangChain and LlamaIndex.</li>
+                <li>Built backend services on Azure Cosmos DB supporting 1,000+ concurrent users, and React / Node.js interfaces on top.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker mono">03 · Projects</p>
+          <h2>Things I've built</h2>
+          <p class="section-sub">Most of my production work lives in private company repositories, so these write-ups describe the architecture rather than link to code.</p>
+        </div>
+
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-filter="llm" aria-pressed="false">LLMs &amp; agents</button>
+          <button type="button" class="chip" data-filter="media" aria-pressed="false">Generative media</button>
+          <button type="button" class="chip" data-filter="vision" aria-pressed="false">Computer vision</button>
+          <button type="button" class="chip" data-filter="infra" aria-pressed="false">Infra &amp; serving</button>
+        </div>
+
+        <div class="projects" id="project-grid">
+          <article class="project featured reveal" data-tags="llm">
+            <div class="project-top">
+              <span class="kicker mono">Production · EdTech</span>
+              <h3>GradeUp AI Platform</h3>
+              <p>An AI learning platform that turns school textbooks into structured lessons, tutors students on them, and reviews their seminar slides while they work.</p>
+            </div>
+            <ul class="points">
+              <li>14-agent LangGraph pipeline for textbooks: Mistral OCR, structure discovery, blueprint builder and judge, gap filler, schema validator, GPT-4o vision pass and a Google Slides agent.</li>
+              <li>Seminar co-pilot (LangGraph + Qdrant RAG + MCP) that watches a student's Google Slides edits, checks them against the textbook and applies fixes after human approval.</li>
+              <li>Hybrid RAG (Qdrant + Voyage AI + SearXNG) behind the AI Tutor, multi-user Debate, Seminar and English Teacher engines.</li>
+              <li>Adaptive learning: homework auto-assigned after 10 tutor questions on one topic, AI quiz grading and a unified student timeline, all traced in Langfuse.</li>
+            </ul>
+            <ul class="stack" aria-label="Tech stack">
+              <li>LangGraph</li><li>FastAPI</li><li>Qdrant</li><li>Mistral OCR</li><li>GPT-4o</li><li>Voyage AI</li><li>SearXNG</li><li>MCP</li><li>Google Slides API</li><li>AWS S3</li><li>Langfuse</li>
+            </ul>
+          </article>
+
+          <article class="project featured reveal" data-tags="llm media infra">
+            <div class="project-top">
+              <span class="kicker mono">Multi-agent · Generative video</span>
+              <h3>AI Film Studio</h3>
+              <p>Takes a short brief and produces a finished film: story, screenplay, cast, shots, voice, music and edit, with each step owned by an agent and checked by a quality gate.</p>
+            </div>
+            <ul class="points">
+              <li>Two LangGraph graphs split at a continuity gate: production (Story, Screenplay, Director, Casting, Production Design, Keyframes, Cinematography) and post-production (Voice, Editor, Music, Sound, Colour, Mix, Delivery).</li>
+              <li>Automated gates measure every image and clip (ArcFace face match, SAM 3, Grounding DINO, SigLIP 2, SSIM and frozen-frame checks) and hand repeated failures to a human reviewer.</li>
+              <li>10 RunPod Serverless endpoints serving open models: Qwen3.6-27B on vLLM, Qwen-Image-Edit, LTX-2.5 video, Wan2.2 VACE, InfiniteTalk lip-sync, ACE-Step music, HunyuanVideo-Foley and FILM.</li>
+            </ul>
+            <ul class="stack" aria-label="Tech stack">
+              <li>LangGraph</li><li>RunPod Serverless</li><li>vLLM</li><li>PyTorch</li><li>MongoDB</li><li>Redis</li><li>FFmpeg</li><li>Bunny CDN</li>
+            </ul>
+          </article>
+
+          <article class="project reveal" data-tags="media llm">
+            <div class="project-top">
+              <span class="kicker mono">Speech · Localization</span>
+              <h3>Dramaplex Dub Studio</h3>
+              <p>Dubs drama videos into 11 Indic languages with speaker-matched voices, the original background music kept, and an optional human review of the translated script.</p>
+            </div>
+            <ul class="points">
+              <li>Vocal separation, WhisperX transcription, diarization, LLM + IndicTrans2 translation, TTS, then a time-aligned mix and remux in FFmpeg.</li>
+              <li>Timing enforced at three layers, from translation length budgets to trim-with-fade at mix time, so no dubbed line runs into the next.</li>
+              <li>Optional Wav2Lip lip-sync, automated QC report and resumable jobs on a remote GPU worker.</li>
+            </ul>
+            <ul class="stack" aria-label="Tech stack">
+              <li>WhisperX</li><li>pyannote</li><li>IndicTrans2</li><li>Sarvam TTS</li><li>Wav2Lip</li><li>Gradio</li><li>AWS EC2</li>
+            </ul>
+          </article>
+
+          <article class="project reveal" data-tags="media infra">
+            <div class="project-top">
+              <span class="kicker mono">GPU inference · Cost</span>
+              <h3>Self-hosted Image Generation</h3>
+              <p>Lesson-illustration service for GradeUp that replaces a paid image API with an open model on rented GPUs, at a projected ~30× lower cost per picture.</p>
+            </div>
+            <ul class="points">
+              <li>Qwen-Image-2512 with a 4-step Lightning add-on fused in and the transformer in FP8, one worker per GPU on a shared queue.</li>
+              <li>Per-project tokens, timeouts that skip stale jobs instead of rendering them, per-worker health, and scale-to-zero on RunPod Serverless.</li>
+            </ul>
+            <ul class="stack" aria-label="Tech stack">
+              <li>Diffusers</li><li>PyTorch</li><li>FastAPI</li><li>RunPod</li><li>Docker</li>
+            </ul>
+          </article>
+
+          <article class="project reveal" data-tags="llm vision">
+            <div class="project-top">
+              <span class="kicker mono">LLM · Computer vision</span>
+              <h3>FirstLevel AI Interviewer</h3>
+              <p>A first-round AI interviewer that reads the candidate's resume, runs an adaptive interview and coding round, and proctors the session through the webcam.</p>
+            </div>
+            <ul class="points">
+              <li>Questions that follow the candidate's answers, coding questions with per-question evaluation, and a final analysis report.</li>
+              <li>Live proctoring with YOLOv5 for phones and gadgets plus face detection for looking away or a second person.</li>
+            </ul>
+            <ul class="stack" aria-label="Tech stack">
+              <li>FastAPI</li><li>Gemini</li><li>YOLOv5</li><li>OpenCV</li><li>AWS</li>
+            </ul>
+          </article>
+
+          <article class="project reveal" data-tags="infra">
+            <div class="project-top">
+              <span class="kicker mono">Platform · Speech</span>
+              <h3>Shared TTS Service</h3>
+              <p>One self-hosted Kokoro-82M text-to-speech service that every team project calls over HTTP, so none of them ships model weights or a third-party TTS key.</p>
+            </div>
+            <ul class="points">
+              <li>Drop-in Node.js and Python clients, four audio formats, and an OpenAI TTS migration path.</li>
+              <li>Per-project tokens from AWS Secrets Manager; health checks report GPU vs CPU fallback.</li>
+            </ul>
+            <ul class="stack" aria-label="Tech stack">
+              <li>Kokoro-82M</li><li>FastAPI</li><li>Docker</li><li>AWS CodeDeploy</li>
+            </ul>
+          </article>
+
+          <article class="project reveal" data-tags="llm">
+            <div class="project-top">
+              <span class="kicker mono">NLP · Recruiting</span>
+              <h3>Resume Parser &amp; Job Matcher</h3>
+              <p>Recruiting backend that turns resumes into structured profiles, scores fit against job descriptions and recommends jobs.</p>
+            </div>
+            <ul class="points">
+              <li>LLM parsing into structured JSON, fitment analysis and resume generation.</li>
+              <li>Candidate search on MongoDB with distance-based location filtering across US and Canadian cities.</li>
+            </ul>
+            <ul class="stack" aria-label="Tech stack">
+              <li>OpenAI</li><li>FastAPI</li><li>MongoDB</li><li>Docker</li>
+            </ul>
+          </article>
+
+          <article class="project reveal" data-tags="vision">
+            <div class="project-top">
+              <span class="kicker mono">Computer vision</span>
+              <h3>Gesture-controlled Media Player</h3>
+              <p>Controls YouTube, MX Player and VLC with hand gestures: real-time hand landmarks mapped to play/pause, volume, seek and mute through keyboard shortcuts.</p>
+            </div>
+            <ul class="stack" aria-label="Tech stack">
+              <li>Python</li><li>OpenCV</li><li>Hand landmarks</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="empty-note" id="empty-note" hidden>No projects in this category yet.</p>
+
+        <div class="repo-row reveal">
+          <p class="mono repo-label">More projects</p>
+          <div class="repo repo-static">
+            <span class="repo-name">MAX chatbot</span>
+            <span class="repo-desc">Resume builder, disease prediction, Gita AI and more in one bot</span>
+          </div>
+          <a class="repo" href="https://github.com/Bhavithbhavi/Basic_Resume_Screening" target="_blank" rel="noopener">
+            <span class="repo-name">Basic_Resume_Screening</span>
+            <span class="repo-desc">Python resume screening service</span>
+          </a>
+          <a class="repo" href="https://github.com/Bhavithbhavi/Zoho_clone" target="_blank" rel="noopener">
+            <span class="repo-name">Zoho_clone</span>
+            <span class="repo-desc">HTML / CSS / JS front-end clone</span>
+          </a>
+          <a class="repo repo-more" href="https://github.com/Bhavithbhavi" target="_blank" rel="noopener">
+            <span class="repo-name">github.com/Bhavithbhavi →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker mono">04 · Skills</p>
+          <h2>Toolbox</h2>
+        </div>
+        <div class="skills">
+          <div class="skill-group reveal">
+            <h3>AI, ML &amp; LLMs</h3>
+            <ul class="stack"><li>LangChain</li><li>LangGraph</li><li>LlamaIndex</li><li>RAG &amp; hybrid RAG</li><li>Prompt engineering</li><li>GPT-4o / 4o-mini</li><li>Mistral OCR</li><li>OpenAI TTS</li><li>Voyage AI embeddings</li><li>Scikit-learn</li><li>TensorFlow</li><li>Keras</li><li>OpenCV</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Agents &amp; protocols</h3>
+            <ul class="stack"><li>LangGraph StateGraph</li><li>Human-in-the-loop</li><li>MCP</li><li>Tool calling</li><li>Agent orchestration</li><li>Async pipelines</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Languages &amp; frameworks</h3>
+            <ul class="stack"><li>Python</li><li>Java</li><li>SQL</li><li>FastAPI</li><li>REST APIs</li><li>Node.js</li><li>React</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Data &amp; cloud</h3>
+            <ul class="stack"><li>Qdrant</li><li>PostgreSQL</li><li>MongoDB</li><li>MySQL</li><li>Azure Cosmos DB</li><li>AWS S3</li><li>RunPod</li><li>Google Slides API</li><li>Scalekit</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Engineering</h3>
+            <ul class="stack"><li>System architecture</li><li>Observability (Langfuse)</li><li>Docker</li><li>OOP &amp; design patterns</li><li>ReportLab</li><li>python-pptx</li><li>SearXNG</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section section-tight" id="education">
+      <div class="container edu-grid">
+        <div class="edu-card reveal">
+          <p class="section-kicker mono">Education</p>
+          <h3>B.E. Computer Science</h3>
+          <p>Kingston Engineering College, Vellore, Tamil Nadu</p>
+          <p class="muted mono">Aug 2020 – Jul 2024 · GPA 7.6</p>
+        </div>
+        <div class="edu-card reveal">
+          <p class="section-kicker mono">Certifications</p>
+          <h3>AI &amp; ML, Data Science Bootcamp</h3>
+          <p>Supervised, unsupervised and reinforcement learning; CNNs, RNNs, Transformers; NLP, LLMs and generative AI.</p>
+          <h3 class="cert-2">Data Visualization</h3>
+          <p>Turning complex datasets into dashboards that support business decisions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container contact-inner reveal">
+        <p class="section-kicker mono">05 · Contact</p>
+        <h2>Building something with LLMs or agents?</h2>
+        <p class="body-lg">I'm happy to talk about AI engineering roles, collaborations, or a pipeline that needs to work every time.</p>
+        <div class="cta-row center">
+          <a class="btn btn-primary" href="mailto:karnambhavith88@gmail.com">karnambhavith88@gmail.com</a>
+          <a class="btn btn-ghost" href="https://github.com/Bhavithbhavi" target="_blank" rel="noopener">GitHub</a>
+          <!-- Add your LinkedIn URL here:
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a>
+          -->
+          <a class="btn btn-ghost" href="assets/Pulluru_Bhavith_Resume.pdf" download>Resume (PDF)</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> Pulluru Bhavith</span>
+      <span class="muted">Plain HTML, CSS &amp; JS · hosted on GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
